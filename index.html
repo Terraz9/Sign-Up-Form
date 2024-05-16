@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="form-validation.js" defer></script>
     <title>Sing-Up Form</title>
 </head>
+
 <body>
     <aside>
         <div class="odin-logo-div">
@@ -15,40 +18,69 @@
     </aside>
     <main>
         <div class="disclaimer">
-            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
+            <p>This is not a real online service! You know you need something like this in your life to help you realize
+                your deepest dreams.
                 Sign up <i>now</i> ito get started.
             </p>
-            <p>You <i>know</i> you want to</p>
+            <p>You <i>know</i> you want to.</p>
         </div>
         <div class="formulary">
-            <form action="" method="post">
+            <p class="do-this-p">Let's do this!</p>
+            <form action="/" id="form-data">
                 <div class="inputs">
-                    <label for="f-name">FIRST NAME</label>
-                    <input type="text" id="f-name">
-                    
-                    <label for="l-name">LAST NAME</label>
-                    <input type="text" id="l-name">
-                    
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email">
+                    <div class="left-inputs">
+                        <div class="input-control">
+                            <label for="f-name">FIRST NAME</label>
+                            <input type="text" id="f-name" class="write-inputs" 
+                            required>
 
-                    <label for="p-number">PHONE NUMBER</label>
-                    <input type="number" id="p-number">
-                  
-                    <label for="password">PASSWORD</label>
-                    <input type="password" id="password">
-                  
-                    <label for="c-password">CONFIRM PASSWORD</label>
-                    <input type="password" id="c-password">
-                    
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="input-control">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" class="write-inputs" required>
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="input-control">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" id="password" class="write-inputs" required minlength="5">
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+
+                    <div class="right-inputs">
+                        <div class="input-control">
+                            <label for="l-name">LAST NAME</label>
+                            <input type="text" id="l-name" class="write-inputs" required>
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="input-control">
+                            <label for="p-number">PHONE NUMBER</label>
+                            <input type="tel" id="p-number" class="write-inputs" required>
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="input-control">
+                            <label for="c-password">CONFIRM PASSWORD</label>
+                            <input type="password" id="c-password" class="write-inputs" required>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
                 </div>
-                <input type="submit" value="Create Account">
-                <p>Already havew an account? <a href="">Log In</a></p>
-            </form>
         </div>
-  
+        <div class="create-account-div">
+            <input type="submit" value="Create Account" class="create-account-btn">
+            <p>Already have an account? <a href="" class="log-in">Log In</a></p>
+        </div>
+        </form>
+        </div>
 
-      </main>
-    
+
+    </main>
+
 </body>
+
 </html>
